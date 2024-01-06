@@ -29,6 +29,7 @@ services:
       - DB_PORT=$POSTGRESDB_DOCKER_PORT
     stdin_open: true
     tty: true
+    image: dewan11415/finalassesment_app
 
 volumes: 
   db:
