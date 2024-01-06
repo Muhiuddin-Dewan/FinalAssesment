@@ -17,8 +17,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       
-      - name: Build image
-        run: docker-compose build
+      - name: Build image and push to dockerhub
+        run: |
+          docker-compose build
+          docker push dewan11415/finalassesment_app:latest
 
       - name: push docker image
         run: docker push dewan11415/finalassesment_app:latest
