@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgresdb:
-    image: postgres
+    build: ./postgresdb_docker
     restart: unless-stopped
     env_file: ./.env
     environment:
@@ -13,6 +13,7 @@ services:
       - $POSTGRESDB_LOCAL_PORT:$POSTGRESDB_DOCKER_PORT
     volumes:
       - db:/var/lib/postgres
+    image: dewan11415/postgresdb
   app:
     depends_on:
       - postgresdb

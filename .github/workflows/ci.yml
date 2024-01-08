@@ -20,5 +20,8 @@ jobs:
       - name: Build image and push to dockerhub
         run: docker-compose build
 
-      - name: push docker image
+      - name: push app docker image
         run: docker push dewan11415/finalassesment_app:latest
+
+      - name: push db docker image
+        run: docker push dewan11415/postgresdb:latest
