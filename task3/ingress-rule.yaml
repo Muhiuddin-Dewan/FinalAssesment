@@ -4,13 +4,12 @@ metadata:
   name: finalassesment-ingress
 spec:
   rules:
-  - host: 192.168.49.2
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: finalassesment-app
-            port:
-              number: 6868
+    - http: 
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: finalassesment-app
+              port:
+                number: 6868
