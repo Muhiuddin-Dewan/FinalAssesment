@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finalassesment-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: finalassesment-app
+  template:
+    metadata:
+      labels:
+        app: finalassesment-app
+    spec:
+      containers:
+      - name: finalassesment-app
+        image: dewan11415/finalassesment_app:latest
+        ports:
+        - containerPort: 6868

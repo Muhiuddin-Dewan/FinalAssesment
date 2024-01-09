@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: finalassesment-ingress
+spec:
+  rules:
+  - host: 192.168.49.2
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: finalassesment-app
+            port:
+              number: 6868

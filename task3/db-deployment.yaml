@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finalassesment-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: finalassesment-db
+  template:
+    metadata:
+      labels:
+        app: finalassesment-db
+    spec:
+      containers:
+      - name: postgresdb
+        image: dewan11415/postgresdb:latest
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_USER
+          value: me
+        - name: POSTGRES_PASSWORD
+          value: abc123
+        - name: POSTGRES_DB
+          value: test1
