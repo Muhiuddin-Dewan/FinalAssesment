@@ -45,7 +45,7 @@
 
 ### Docker Hub Output
 
-![Docker Hub Output](/output_images/dockerhub_output.png)
+![Docker Hub Output](/output_images/docker-hub.PNG)
 
 ### CI Job Output
 
